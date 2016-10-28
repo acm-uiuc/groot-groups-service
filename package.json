@@ -1,0 +1,14 @@
+{
+  "name": "sig-service",
+  "version": "1.0.0",
+  "description": "service to process sig information",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"no test\""
+  },
+  "author": "ish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
