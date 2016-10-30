@@ -4,7 +4,7 @@ var path = require("path");
 var app  = express();
 
 app.get("/sigs", function(req, res) {
-	res.setHeader("Content-Type", "application/json");
+    res.setHeader("Content-Type", "application/json");
     res.sendFile(path.resolve(__dirname) + "/sigs.json");
 });
 
