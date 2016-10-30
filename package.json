@@ -1,7 +1,7 @@
 {
-  "name": "sig-service",
+  "name": "groot-groups-service",
   "version": "1.0.0",
-  "description": "service to process sig information",
+  "description": "service to serve acm group information",
   "main": "server.js",
   "scripts": {
     "test": "echo \"no test\""

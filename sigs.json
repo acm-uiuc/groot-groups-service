@@ -1,1 +1,210 @@
-[{"name":"Gamebuilders","description":"Anything and everything related to game development","Chairs":"Victor Mouschovias","meetingTime":"19:00","meetingDay":"Monday","meetingLoc":"Siebel 3403","site":"http://www.acm.uiuc.edu/gamebuilders/","members":[],"email":"Gamebuilders@acm.uiuc.edu","join":false},{"name":"ICPC","description":"Facilitate the development of contest programming skills, with the goal of producing highly competitive teams in the prestigious ACM ICPC competition.","chairs":"Arthur Li, Matthew Worley","meetingTime":"19:00","meetingDay":"Monday","meetingLoc":"Siebel 0218","site":" http://icpc.cs.illinois.edu/","members":[],"email":"ICPC-l@acm.uiuc.edu","join":false},{"name":"SIGAI","description":"Special Interest Group for Artificial Intelligence","chairs":"Akshay Mishra","meetingTime":"","meetingDay":"","meetingLoc":"","site":"http://www.acm.uiuc.edu/sigart/","members":[],"email":"SIGArt-l@acm.uiuc.edu","join":false},{"name":"SIGNature","description":"To pursue biological computing and cybernetics.","chairs":"Kyle Herndon","meetingTime":"13:00","meetingDay":"Wednesday","meetingLoc":"Siebel 1106","site":"","members":[],"email":"SIGBio-l@acm.uiuc.edu","join":false},{"name":"SIGBot","description":"Special Interest Group for Robotics","chairs":"Rauhul Varma, Naren Dasen","meetingTime":"15:00","meetingDay":"Friday","meetingLoc":"Siebel 1110","site":"http://www.acm.uiuc.edu/sigbot/","members":[],"email":" SIGBot@acm.uiuc.edu","join":false},{"name":"SIGCHI","description":"Special Interest Group for Human-Computer Interaction.","chairs":"Andrew Kuznetsov","meetingTime":"17:00","meetingDay":"Wednesday","meetingLoc":"Siebel 1302","site":"http://www.acm.uiuc.edu/sigchi","members":[],"email":"SIGCHI-l@acm.uiuc.edu","join":false},{"name":"SIGGRAPH","description":"Special Interest Group for Graphics","chairs":"Chengyang Weng","meetingTime":"19:00","meetingDay":"Thursday","meetingLoc":"Siebel 1131","site":"","members":[],"email":"","join":false},{"name":"ADSA","description":"Association of Data Science and Analytics","chairs":"Srujan Gupta","meetingTime":"","meetingDay":"","meetingLoc":"","site":"","members":[],"email":"","join":false},{"name":"SIGMobile","description":"Special Interst Group for Mobile Development","chairs":"Rohan Mathur","meetingTime":"18:00","meetingDay":"Sunday","meetingLoc":"Siebel 1109","site":"","members":[],"email":"","join":false},{"name":"SIGMusic","description":"Special Interest Group for Music","chairs":"Berwin Xie","meetingTime":"20:00","meetingDay":"Wednesday","meetingLoc":"Siebel 1105","site":"","members":[],"email":"","join":false},{"name":"SIGOps","description":"Special Interest Group for Operating Systems","chairs":"Tanishq Dubey","meetingTime":"19:00","meetingDay":"Wednesday","meetingLoc":"Siebel 4405","site":"","members":[],"email":"","join":false},{"name":"SIGPlan","description":"Special Interest Group for Programming Languages","chairs":"Remy Goldschmidt","meetingTime":"15:00","meetingDay":"Sunday","meetingLoc":"Siebel 2407","site":"","members":[],"email":"","join":false},{"name":"SIGPwny","description":"Special Interest Group for Security","chairs":"Alex Mitsdarfer","meetingTime":"17:00","meetingDay":"Thursday","meetingLoc":"Siebel 3405","site":"","members":[],"email":"","join":false},{"name":"WebMonkeys","description":"Special Interest Group for Web Development","chairs":"Sujay Khandekar","meetingTime":"18:00","meetingDay":"Tuesday","meetingLoc":"Siebel 1214","site":"","members":[],"join":false},{"name":"IlliniHackers","description":"Special Interest Group for Hackathons","chairs":"Yasha Mostofi, Arnav Mishra","meetingTime":"19:00","meetingDay":"Thursday","meetingLoc":"Siebel 1214","site":"","members":[],"join":false}]
+[
+   {
+      "name":"Gamebuilders",
+      "description":"Anything and everything related to game development",
+      "Chairs":"Victor Mouschovias",
+      "meetingTime":"19:00",
+      "meetingDay":"Monday",
+      "meetingLoc":"Siebel 3403",
+      "site":"http://www.acm.uiuc.edu/gamebuilders/",
+      "members":[
+
+      ],
+      "email":"Gamebuilders@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"ICPC",
+      "description":"Facilitate the development of contest programming skills, with the goal of producing highly competitive teams in the prestigious ACM ICPC competition.",
+      "chairs":"Arthur Li, Matthew Worley",
+      "meetingTime":"19:00",
+      "meetingDay":"Monday",
+      "meetingLoc":"Siebel 0218",
+      "site":" http://icpc.cs.illinois.edu/",
+      "members":[
+
+      ],
+      "email":"ICPC-l@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"SIGAI",
+      "description":"Special Interest Group for Artificial Intelligence",
+      "chairs":"Akshay Mishra",
+      "meetingTime":"",
+      "meetingDay":"",
+      "meetingLoc":"",
+      "site":"http://www.acm.uiuc.edu/sigart/",
+      "members":[
+
+      ],
+      "email":"SIGArt-l@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"SIGNature",
+      "description":"To pursue biological computing and cybernetics.",
+      "chairs":"Kyle Herndon",
+      "meetingTime":"13:00",
+      "meetingDay":"Wednesday",
+      "meetingLoc":"Siebel 1106",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"SIGBio-l@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"SIGBot",
+      "description":"Special Interest Group for Robotics",
+      "chairs":"Rauhul Varma, Naren Dasan",
+      "meetingTime":"15:00",
+      "meetingDay":"Friday",
+      "meetingLoc":"Siebel 1110",
+      "site":"http://www.acm.uiuc.edu/sigbot/",
+      "members":[
+
+      ],
+      "email":" SIGBot@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"SIGCHI",
+      "description":"Special Interest Group for Human-Computer Interaction.",
+      "chairs":"Andrew Kuznetsov",
+      "meetingTime":"17:00",
+      "meetingDay":"Wednesday",
+      "meetingLoc":"Siebel 1302",
+      "site":"http://www.acm.uiuc.edu/sigchi",
+      "members":[
+
+      ],
+      "email":"SIGCHI-l@acm.uiuc.edu",
+      "join":false
+   },
+   {
+      "name":"SIGGRAPH",
+      "description":"Special Interest Group for Graphics",
+      "chairs":"Chengyang Weng",
+      "meetingTime":"19:00",
+      "meetingDay":"Thursday",
+      "meetingLoc":"Siebel 1131",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"ADSA",
+      "description":"Association of Data Science and Analytics",
+      "chairs":"Srujan Gupta",
+      "meetingTime":"",
+      "meetingDay":"",
+      "meetingLoc":"",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"SIGMobile",
+      "description":"Special Interst Group for Mobile Development",
+      "chairs":"Rohan Mathur",
+      "meetingTime":"18:00",
+      "meetingDay":"Sunday",
+      "meetingLoc":"Siebel 1109",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"SIGMusic",
+      "description":"Special Interest Group for Music",
+      "chairs":"Berwin Xie",
+      "meetingTime":"20:00",
+      "meetingDay":"Wednesday",
+      "meetingLoc":"Siebel 1105",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"SIGOps",
+      "description":"Special Interest Group for Operating Systems",
+      "chairs":"Tanishq Dubey",
+      "meetingTime":"19:00",
+      "meetingDay":"Wednesday",
+      "meetingLoc":"Siebel 4405",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"SIGPlan",
+      "description":"Special Interest Group for Programming Languages",
+      "chairs":"Remy Goldschmidt",
+      "meetingTime":"15:00",
+      "meetingDay":"Sunday",
+      "meetingLoc":"Siebel 2407",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"SIGPwny",
+      "description":"Special Interest Group for Security",
+      "chairs":"Alex Mitsdarfer",
+      "meetingTime":"17:00",
+      "meetingDay":"Thursday",
+      "meetingLoc":"Siebel 3405",
+      "site":"",
+      "members":[
+
+      ],
+      "email":"",
+      "join":false
+   },
+   {
+      "name":"WebMonkeys",
+      "description":"Special Interest Group for Web Development",
+      "chairs":"Sujay Khandekar",
+      "meetingTime":"18:00",
+      "meetingDay":"Tuesday",
+      "meetingLoc":"Siebel 1214",
+      "site":"",
+      "members":[
+
+      ],
+      "join":false
+   },
+   {
+      "name":"IlliniHackers",
+      "description":"Special Interest Group for Hackathons",
+      "chairs":"Yasha Mostofi, Arnav Mishra",
+      "meetingTime":"19:00",
+      "meetingDay":"Thursday",
+      "meetingLoc":"Siebel 1214",
+      "site":"",
+      "members":[
+
+      ],
+      "join":false
+   }
+]
