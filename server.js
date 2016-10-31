@@ -17,15 +17,15 @@ app.get("/sigs", function(req, res) {
     res.sendFile(path.resolve(__dirname) + "/sigs.json");
 });
 
-app.post("/groups", function(req, res){
-	var netid = req.body.netid;
-	var groupType = req.body.group;
+app.get("/verifyGroup/:group/:netid", function(req, res){
+	var netid = req.params.netid;
+	var groupName = req.params.group;
 
 	jsonfile.readFile(file, function(err, obj) {
-		if(obj[groupType] && obj[groupType].indexOf(netid)> -1)
-			return res.json({"netid":netid, "authenticated":"true"});
+		if(obj[groupName] && obj[groupName].indexOf(netid)> -1)
+			return res.json({"netid":netid, "groups": groupName, "member":"true"});
 		else
-			return res.json({"authenticated":"false"});
+			return res.json({"netid":netid, "member":"false"});
 	});
 });
 
