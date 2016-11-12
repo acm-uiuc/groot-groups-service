@@ -22,9 +22,9 @@ function loadFile(filename)
 	var file;
 	try {
 		file = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
-		console.log(file);
+		// console.log(file);
 	}catch (e) {
-		console.log(e);
+		console.log("ERROR: " + e);
 	}
 	return file;
 }
@@ -33,7 +33,6 @@ function loadFile(filename)
 var sigs = loadFile("sigs.yaml");
 var committees = loadFile("committees.yaml");
 
-console.log(committees[0]);
 app.get("/groups", function(req, res){
 	return res.json(["sigs","committees"]);
 });
@@ -48,28 +47,57 @@ app.get("/groups/:groupType", function(req, res){
 		return res.json({"Error":"groupType does not exist, must be sig or committee"});
 });
 
-function getGroup(res, groupType, groupName)
+function getGroup(groupType, groupName)
 {
 	for(var i = 0; i < groupType.length; i++)
 	{
-		console.log(groupType[i]);
+		// console.log(groupType[i]);
 		if(groupType[i].name.toLowerCase() == groupName.toLowerCase())
-			return res.json(groupType[i]);
+			return groupType[i];
 	}
 	return res.json({"Error":"Group does not exist"});
+}
+
+function checkIDs(group, netid)
+{
+	
 }
 
 app.get("/groups/:groupType/:groupName", function(req, res){
 	//could have header ?isMember=<netid>
 	var groupType = req.params.groupType;
 	var groupName = req.params.groupName;
+	var netid = req.query.isMember;
+	console.log(netid);
 	if(groupType == "sigs")
 	{
-		return getGroup(res, sigs, groupName);
+		var group = getGroup(sigs, groupName);
+		if(netid == undefined)
+			return res.json(group);
+		else
+		{
+			for(var i = 0; i < group.netids.length; i++)
+			{
+				if(group.netids[i] == netid)
+					return res.json({"netid": netid, "isValid" : "true"});
+			}
+			return res.json({"isValid" : "false"});
+		}
 	}
 	else if(groupType == "committees")
 	{
-		return getGroup(res, committees, groupName);
+		var group = getGroup(committees, groupName);
+		if(netid == undefined)
+			return res.json(group);
+		else
+		{
+			for(var i = 0; i < group.netids.length; i++)
+			{
+				if(group.netids[i] == netid)
+					return res.json({"netid": netid, "isValid" : "true"});
+			}
+			return res.json({"isValid" : "false"});
+		}
 	}
 	else
 		return res.json({"Error":"groupType does not exist, must be a sig or committee"});
