@@ -27,8 +27,8 @@ function loadFile(filename)
 }
 
 
-var sigs = loadFile("sigs.yaml");
-var committees = loadFile("committees.yaml");
+var sigs = loadFile("store/sigs.yaml");
+var committees = loadFile("store/committees.yaml");
 
 app.get("/groups", function(req, res){
 	return res.json(["sigs","committees"]);
