@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+
 var express = require('express');
 var path = require("path");
 
@@ -8,25 +11,69 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-var jsonfile = require('jsonfile');
-var file = 'groups.json';
+// var jsonfile = require('jsonfile');
+// var file = 'groups.json';
+
+var yaml = require('js-yaml');
+var fs   = require('fs');
+
+function loadFile(filename)
+{
+	var file;
+	try {
+		file = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
+		console.log(file);
+	}catch (e) {
+		console.log(e);
+	}
+	return file;
+}
 
 
-app.get("/sigs", function(req, res) {
-    res.setHeader("Content-Type", "application/json");
-    res.sendFile(path.resolve(__dirname) + "/sigs.json");
+var sigs = loadFile("sigs.yaml");
+var committees = loadFile("committees.yaml");
+
+console.log(committees[0]);
+app.get("/groups", function(req, res){
+	return res.json(["sigs","committees"]);
 });
 
-app.get("/verifyGroup/:group/:netid", function(req, res){
-	var netid = req.params.netid;
-	var groupName = req.params.group;
+app.get("/groups/:groupType", function(req, res){
+	var groupType = req.params.groupType;
+	if(groupType == "sigs")
+		return res.json(sigs);
+	else if(groupType == "committees")
+		return res.json(committees);
+	else
+		return res.json({"Error":"groupType does not exist, must be sig or committee"});
+});
 
-	jsonfile.readFile(file, function(err, obj) {
-		if(obj[groupName] && obj[groupName].indexOf(netid)> -1)
-			return res.json({"netid":netid, "groups": groupName, "member":"true"});
-		else
-			return res.json({"netid":netid, "member":"false"});
-	});
+function getGroup(res, groupType, groupName)
+{
+	for(var i = 0; i < groupType.length; i++)
+	{
+		console.log(groupType[i]);
+		if(groupType[i].name.toLowerCase() == groupName.toLowerCase())
+			return res.json(groupType[i]);
+	}
+	return res.json({"Error":"Group does not exist"});
+}
+
+app.get("/groups/:groupType/:groupName", function(req, res){
+	//could have header ?isMember=<netid>
+	var groupType = req.params.groupType;
+	var groupName = req.params.groupName;
+	if(groupType == "sigs")
+	{
+		return getGroup(res, sigs, groupName);
+	}
+	else if(groupType == "committees")
+	{
+		return getGroup(res, committees, groupName);
+	}
+	else
+		return res.json({"Error":"groupType does not exist, must be a sig or committee"});
+
 });
 
 app.listen(9001, function() {
