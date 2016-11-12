@@ -4,8 +4,9 @@
   "description": "a service to serve acm group information",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"no test\""
+    "test": "echo \"no tests\""
   },
+  "author": "ACM@UIUC", 
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
