@@ -1,0 +1,31 @@
+---
+- name: Admin
+  description: The ACM Administration Team is the committee responsible for the establishment and maintenance of ACM computing resources, service and support to the ACM users, and coordination and communication between ACM and campus technology management groups such as Engineering IT and Technology Services.
+  chairs: Eric Ahn
+  members: [Eric Ahn, Aashish Kapur, Kevin Rajan, Ish Shah, Kevin Wang]
+  netids: [ericahn3, askapur2, ksrajan2, klwang3, ishshah2]
+  email: Admin-l@acm.uiuc.edu
+- name: Corporate
+  description: Corporate committee
+  chairs: Tyler Kim, Amanda Sopkin
+  members: [Nikoli Dryden, Sujay Khandekar, Tyler Kim, Kevin Rajan, Sameet Sapra,Amanda Sopkin]
+  netids: [dryden2, sopkin2, khandek2, tkim139, ssapra2, ksrajan2]
+  email: Corporate-l@acm.uiuc.edu
+- name: Events
+  description: The Events committee organizes all ACM portfolio events, including Reflections | Projections and HackIllinois.
+  chairs: Sujay Khandekar, Arnav Mishra
+  members: [Sujay Khandekar, Arnav Mishra]
+  netids: [khandek2, agmishr2]
+  email: Conference@acm.uiuc.edu
+- name: Projects
+  description: Projects
+  chairs: Kevin Wang
+  members: [Kevin Wang]
+  netids: [klwang3]
+  email: Projects-l@acm.uiuc.edu
+- name: Social
+  description: Organize social events for ACM@UIUC!
+  chairs: Margie Chubin
+  members: [Margie Chubin, Jacob Gacek, Pranay Prakash]
+  netids: [chubin2, jgacek2, pgpraka2]
+  email: Social-l@acm.uiuc.edu
