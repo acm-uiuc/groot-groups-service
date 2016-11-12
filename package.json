@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"no test\""
   },
-  "author": "ish",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
