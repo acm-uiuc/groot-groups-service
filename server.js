@@ -69,9 +69,9 @@ function checkIDs(res, group, netid)
 	for(var i = 0; i < group.netids.length; i++)
 	{
 		if(group.netids[i] == netid)
-			return res.json({"netid": netid, "isValid" : "true"});
+			return res.json({"netid": netid, "isValid" : true});
 	}
-	return res.json({"isValid" : "false"});
+	return res.json({"isValid" : false});
 }
 
 app.get("/groups/:groupType/:groupName", function(req, res){
