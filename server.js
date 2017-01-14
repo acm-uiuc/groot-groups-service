@@ -23,13 +23,12 @@ var request = require('request');
 var yaml = require('js-yaml');
 var fs   = require('fs');
 
-function loadFile(filename)
-{
+function loadFile(filename) {
 	var file;
 	try {
 		file = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
 		// console.log(file);
-	}catch (e) {
+	} catch (e) {
 		console.log("ERROR: " + e);
 	}
 	return file;
@@ -45,21 +44,21 @@ app.get("/groups", function(req, res){
 
 app.get("/groups/:groupType", function(req, res){
 	var groupType = req.params.groupType;
-	if(groupType == "sigs")
+	if(groupType == "sigs") {
 		return res.json(sigs);
-	else if(groupType == "committees")
+	} else if(groupType == "committees") {
 		return res.json(committees);
-	else
+	} else {
 		return res.json({"Error":"groupType does not exist, must be sig or committee"});
+	}
 });
 
-function getGroup(groupType, groupName)
-{
-	for(var i = 0; i < groupType.length; i++)
-	{
+function getGroup(groupType, groupName) {
+	for(var i = 0; i < groupType.length; i++) {
 		// console.log(groupType[i]);
-		if(groupType[i].name.toLowerCase() == groupName.toLowerCase())
+		if(groupType[i].name.toLowerCase() == groupName.toLowerCase()) {
 			return groupType[i];
+		}
 	}
 	return {"Error":"Group does not exist"};
 }
@@ -68,8 +67,9 @@ function checkIDs(res, group, netid)
 {
 	for(var i = 0; i < group.netids.length; i++)
 	{
-		if(group.netids[i] == netid)
+		if(group.netids[i] == netid) {
 			return res.json({"netid": netid, "isValid" : true});
+		}
 	}
 	return res.json({"isValid" : false});
 }
@@ -78,24 +78,24 @@ app.get("/groups/:groupType/:groupName", function(req, res){
 	var groupType = req.params.groupType;
 	var groupName = req.params.groupName;
 	var netid = req.query.isMember;
-	if(groupType == "sigs")
-	{
+	if(groupType == "sigs") {
 		var group = getGroup(sigs, groupName);
-		if(netid == undefined || group["Error"])
+		if(netid == undefined || group["Error"]) { 
 			return res.json(group);
-		else
+		} else {
 			return checkIDs(res, group, netid);
+		}
 	}
-	else if(groupType == "committees")
-	{
+	else if(groupType == "committees") {
 		var group = getGroup(committees, groupName);
-		if(netid == undefined || group["Error"])
+		if(netid == undefined || group["Error"]) {
 			return res.json(group);
-		else
+		} else {
 			return checkIDs(res, group, netid);
-	}
-	else
+		}
+	} else {
 		return res.json({"Error":"groupType does not exist, must be sig or committee"});
+	}
 });
 
 app.listen(9001, function() {
