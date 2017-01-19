@@ -10,12 +10,29 @@
 
 var express = require('express');
 var path = require("path");
+const winston = require('winston');
+const expressWinston = require('express-winston');
+const nodemailer = require('nodemailer');
+const smtpConfig = {
+	host: 'express-smtp.cites.uiuc.edu',
+	port: 25,
+	secure: false,
+	ignoreTLS: true,
+};
+const transporter = nodemailer.createTransport(smtpConfig);
 
 var app  = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
+}));
+app.use(expressWinston.logger({
+  transports: [
+    new winston.transports.Console()
+  ],
+  meta: false, // don't log metadata about requests (produces very messy logs if true)
+  expressFormat: true, // Use the default Express/morgan request formatting.
 }));
 
 var request = require('request');
@@ -95,6 +112,29 @@ app.get("/groups/:groupType/:groupName", function(req, res){
 		}
 	} else {
 		return res.json({"Error":"groupType does not exist, must be sig or committee"});
+	}
+});
+
+process.on('uncaughtException', function (err) {
+	if(process.env.EXCEPTION_FROM_EMAIL && process.env.EXCEPTION_TO_EMAIL){
+		var mailOptions = {
+			from: process.env.EXCEPTION_FROM_EMAIL, 
+			to: process.env.EXCEPTION_TO_EMAIL,  
+			subject: '[Groot-groups-service] Fatal Error: ' + (new Date).toLocaleTimeString(), 
+			text: 'Uncaught Exception: Groot Groups Service\n' + err.stack,
+		};
+
+		transporter.sendMail(mailOptions, function(error, info){
+			if(error){
+				console.log(error);
+			}else{
+				console.log('Message sent: ' + info.response);
+			}
+		console.error((new Date).toLocaleTimeString() + ' uncaughtException:', err.message)
+		console.error(err.stack)
+		process.exit(1);
+
+		});
 	}
 });
 
