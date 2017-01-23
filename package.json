@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"no tests\""
   },
-  "author": "ACM@UIUC",
-  "license": "ISC",
+  "author": "Groot Development Team <acm@illinois.edu>",
+  "license": "NCSA",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
