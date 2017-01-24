@@ -114,7 +114,7 @@ app.get("/groups/:groupType/:groupName", function(req, res){
 		return res.json({"Error":"groupType does not exist, must be sig or committee"});
 	}
 });
-
+/*
 process.on('uncaughtException', function (err) {
 	if(process.env.EXCEPTION_FROM_EMAIL && process.env.EXCEPTION_TO_EMAIL){
 		var mailOptions = {
@@ -137,7 +137,7 @@ process.on('uncaughtException', function (err) {
 		});
 	}
 });
-
+*/
 app.listen(9001, function() {
     var addr = this.address().port;
     console.log("Server running on", addr);
