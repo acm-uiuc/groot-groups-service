@@ -4,12 +4,14 @@
   "description": "a service to serve acm group information",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"no tests\""
+    "test": "echo \"no tests\"",
+    "lint": "node_modules/eslint/bin/eslint.js server.js"
   },
   "author": "Groot Development Team <acm@illinois.edu>",
   "license": "NCSA",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "eslint": "^3.15.0",
     "express": "^4.14.0",
     "express-winston": "^2.1.2",
     "js-yaml": "^3.7.0",
