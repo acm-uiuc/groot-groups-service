@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"no tests\"",
-    "lint": "node_modules/eslint/bin/eslint.js server.js"
+    "lint": "node_modules/eslint/bin/eslint.js server.js",
+    "start": "node server.js"
   },
   "author": "Groot Development Team <acm@illinois.edu>",
   "license": "NCSA",
@@ -19,5 +20,14 @@
     "nodemailer": "^2.7.0",
     "request": "^2.78.0",
     "winston": "^2.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acm-uiuc/groot-groups-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acm-uiuc/groot-groups-service/issues"
+  },
+  "homepage": "https://github.com/acm-uiuc/groot-groups-service#readme"
 }
