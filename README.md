@@ -12,7 +12,7 @@ Questions on how to add your app to Groot or use the Groot API:
 
 [![Join the chat at https://gitter.im/acm-uiuc/groot-users](https://badges.gitter.im/acm-uiuc/groot-users.svg)](https://gitter.im/acm-uiuc/groot-users?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-##Getting Started
+## Getting Started
 
 To use,``` npm install ``` and ```node server.js```
 
