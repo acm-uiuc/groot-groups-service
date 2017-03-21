@@ -1,5 +1,8 @@
 # groot-groups-service
-A service for holding groups(sig + committee)
+
+[![Build Status](https://travis-ci.org/acm-uiuc/groot-groups-service.svg?branch=master)](https://travis-ci.org/acm-uiuc/groot-groups-service)
+
+A service for ACM groups (sig + committee)
 
 Groot core development:
 
